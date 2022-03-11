@@ -1,0 +1,62 @@
+[
+  {
+    "Id": "HCO.DI.Chilelift",
+    "Description": "Integración SAP Business One con SalesForce",
+    "WizardSteps": [
+      {
+        "PanelId": "PnlDefinition",
+        "Name": "Definir parámetros generales",
+        "Number": 1
+      },
+      {
+        "PanelId": "PnlSboConnection",
+        "Name": "Configurar conexión con SAP Business One Origen",
+        "Number": 2
+      },
+      {
+        "PanelId": "PnlRestAPI",
+        "Name": "Configurar conexión con SalesForce",
+        "Number": 3
+      },
+      {
+        "PanelId": "PnlConfigInterfaces",
+        "Name": "Configurar interfaces de integración",
+        "Number": 4
+      }
+    ],
+    "Interfaces": [
+      {
+        "Id": 1,
+        "Name": "Entregas",
+        "FrecuencyType": "mi",
+        "Interval": 1,
+        "Priority": 3,
+        "ClassName": "DeliveryNotes"
+      },
+      {
+        "Id": 2,
+        "Name": "Pagos recibidos",
+        "FrecuencyType": "mi",
+        "Interval": 1,
+        "Priority": 3,
+        "ClassName": "IncomingPayments"
+      },
+      {
+        "Id": 3,
+        "Name": "Articulos",
+        "FrecuencyType": "mi",
+        "Interval": 1,
+        "Priority": 3,
+        "ClassName": "Items"
+      },
+      {
+        "Id": 4,
+        "Name": "Listas de precios",
+        "FrecuencyType": "mi",
+        "Interval": 1,
+        "Priority": 3,
+        "ClassName": "PriceList"
+      }
+    ]
+  }
+]

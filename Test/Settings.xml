@@ -1,0 +1,125 @@
+<?xml version="1.0" standalone="yes"?>
+<Settings xmlns="http://tempuri.org/Settings.xsd">
+  <Scenario>
+    <Id>1</Id>
+    <ScenarioName>Integración SAP Business One con SalesForce</ScenarioName>
+    <LogError>true</LogError>
+    <IntegrationDLLName>HCO.DI.Chilelift</IntegrationDLLName>
+    <LogInfo>true</LogInfo>
+    <ScenarioEngine>job</ScenarioEngine>
+    <Sb1_CnxType>sl</Sb1_CnxType>
+    <Sb1_Server />
+    <Sb1_DbServerType>dst_HANADB</Sb1_DbServerType>
+    <Sb1_LicenseServer />
+    <Sb1_ServiceLayerEndpoint>https://192.168.0.9:50000/b1s/v1</Sb1_ServiceLayerEndpoint>
+    <Sb1_Database>SBODEMOCL</Sb1_Database>
+    <Sb1_DbUser />
+    <Sb1_DbPassword>7+wu9TmcTV0=</Sb1_DbPassword>
+    <Sb1_User>ncubillos</Sb1_User>
+    <Sb1_Password>SJqOiOO+ZBo=</Sb1_Password>
+    <Enabled>true</Enabled>
+    <DaysRetentionLog>15</DaysRetentionLog>
+    <Sb1_CnxType2>sl</Sb1_CnxType2>
+    <Sb1_Server2 />
+    <Sb1_DbServerType2 />
+    <Sb1_ServiceLayerEndpoint2 />
+    <Sb1_LicenseServer2 />
+    <Sb1_Database2 />
+    <Sb1_DbUser2 />
+    <Sb1_DbPassword2>7+wu9TmcTV0=</Sb1_DbPassword2>
+    <Sb1_User2 />
+    <Sb1_Password2>7+wu9TmcTV0=</Sb1_Password2>
+    <HubSpot_Endpoint>https://api.hubapi.com/</HubSpot_Endpoint>
+    <HubSpot_CnxType>apikey</HubSpot_CnxType>
+    <HubSpot_APIKey>7+wu9TmcTV0=</HubSpot_APIKey>
+    <HubSpot_ClientID />
+    <HubSpot_ApplicationID />
+    <HubSpot_ClientSecret>7+wu9TmcTV0=</HubSpot_ClientSecret>
+    <Mail_SMTPServer />
+    <Mail_UserName />
+    <Mail_SenderName />
+    <Mail_SMTPPort />
+    <Mail_Password>7+wu9TmcTV0=</Mail_Password>
+    <Mail_UseTLSEncryption>false</Mail_UseTLSEncryption>
+    <RestAPI_Description />
+    <RestAPI_Endpoint1>https://test.salesforce.com/services/oauth2</RestAPI_Endpoint1>
+    <RestAPI_Endpoint2>https://chileliftltda2--sbx1.my.salesforce.com/services/data/v53.0/sobjects</RestAPI_Endpoint2>
+    <RestAPI_Account>3MVG9Lu3LaaTCEgJEimFR7kuIhVNicuxhWcEKvXr0rHhY4z3UHqA9OoH96K0SmxxQhLzb0dczcOJ3.IMl0JC4</RestAPI_Account>
+    <RestAPI_APIKey>eX0lTr+0dNzxiHeqptyRvdvtHn8Y/WoMN0bWp7oVKbxbRRjaCqf+hFwZQQLoWe471FCHYrMhfSWRwhlw3fLTd+/sLvU5nE1d</RestAPI_APIKey>
+    <RestAPI_ClientID />
+    <RestAPI_ApplicationID />
+    <RestAPI_ClientSecret>7+wu9TmcTV0=</RestAPI_ClientSecret>
+    <RestAPI_User>gnilo@chilelift.cl.sbx1</RestAPI_User>
+    <RestAPI_Password>KmyzUWb/ovpNaNP2DEZ/sw==</RestAPI_Password>
+    <Odbc_Description />
+    <Odbc_DbServer />
+    <Odbc_DbName />
+    <Odbc_DbUser />
+    <Odbc_DbPassword>7+wu9TmcTV0=</Odbc_DbPassword>
+    <Param1 />
+    <Param2 />
+    <Param3 />
+    <Param4 />
+    <Param5 />
+  </Scenario>
+  <Interface>
+    <Id>1</Id>
+    <ScenarioId>1</ScenarioId>
+    <Name>Entregas</Name>
+    <FrequencyTypeId>mi</FrequencyTypeId>
+    <Interval>1</Interval>
+    <Priority>1</Priority>
+    <LastIntegration>2022-01-01T08:19:59.5371872-06:00</LastIntegration>
+    <Enabled>true</Enabled>
+    <ClassName>DeliveryNotes</ClassName>
+    <NextIntegration>2021-07-29T08:49:05.7050142-06:00</NextIntegration>
+    <CronExpression>0/30 * * ? * * *</CronExpression>
+    <CronDescription>Cada 30 segundos</CronDescription>
+    <IsJob>true</IsJob>
+  </Interface>
+  <Interface>
+    <Id>2</Id>
+    <ScenarioId>1</ScenarioId>
+    <Name>Pagos recibidos</Name>
+    <FrequencyTypeId>mi</FrequencyTypeId>
+    <Interval>1</Interval>
+    <Priority>2</Priority>
+    <LastIntegration>2022-01-12T08:00:42.8883045-06:00</LastIntegration>
+    <Enabled>false</Enabled>
+    <ClassName>IncomingPayments</ClassName>
+    <NextIntegration>2000-01-01T00:00:00-06:00</NextIntegration>
+    <CronExpression>0/30 * * ? * * *</CronExpression>
+    <CronDescription>Cada 30 segundos</CronDescription>
+    <IsJob>true</IsJob>
+  </Interface>
+  <Interface>
+    <Id>3</Id>
+    <ScenarioId>1</ScenarioId>
+    <Name>Articulos</Name>
+    <FrequencyTypeId>mi</FrequencyTypeId>
+    <Interval>1</Interval>
+    <Priority>3</Priority>
+    <LastIntegration>2022-01-26T08:19:59.5371872-06:00</LastIntegration>
+    <Enabled>false</Enabled>
+    <ClassName>Items</ClassName>
+    <NextIntegration>2000-01-01T00:00:00-06:00</NextIntegration>
+    <CronExpression>0/30 * * ? * * *</CronExpression>
+    <CronDescription>Cada 30 segundos</CronDescription>
+    <IsJob>true</IsJob>
+  </Interface>
+  <Interface>
+    <Id>4</Id>
+    <ScenarioId>1</ScenarioId>
+    <Name>Listas de precios</Name>
+    <FrequencyTypeId>mi</FrequencyTypeId>
+    <Interval>1</Interval>
+    <Priority>3</Priority>
+    <LastIntegration>2022-01-26T08:19:59.5371872-06:00</LastIntegration>
+    <Enabled>false</Enabled>
+    <ClassName>PriceList</ClassName>
+    <NextIntegration>2000-01-01T00:00:00-06:00</NextIntegration>
+    <CronExpression>0/30 * * ? * * *</CronExpression>
+    <CronDescription>Cada 30 segundos</CronDescription>
+    <IsJob>true</IsJob>
+  </Interface>
+</Settings>
